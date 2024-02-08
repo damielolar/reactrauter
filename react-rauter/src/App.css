@@ -1,0 +1,66 @@
+.App{
+  font-family: Marcellus;
+}
+/* Overall card styling */
+.movie-card {
+  background-color: #f2f2f2; /* Lighter background for contrast */
+  border: 1px solid #e0e0e0; /* Subtle border */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+  margin-bottom: 20px;
+  display: grid; /* Use grid for modern layout */
+  grid-template-columns: 220px 220px 220px; /* Adjust for multiple columns if needed */
+  grid-gap: 10px; /* Spacing between elements */
+}
+
+/* Image styling */
+.movie-card img {
+  width: 100%;
+  height: 200px; /* Adjust height as needed */
+  object-fit: cover;
+  grid-row: 1; /* Place image in first row */
+}
+
+/* Title and rating styling */
+.movie-card h2,
+.movie-card p {
+  padding: 5px; /* Reduce padding for grid layout */
+  font-family: sans-serif; /* Choose modern font */
+  color: #000; /* Black text */
+}
+
+.movie-card h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.movie-card p {
+  font-size: 14px;
+  color: #888; /* Lighter gray for less emphasis */
+}
+
+/* Rating styling (optional) */
+.movie-card .rating {
+  color: #f9a825; /* Orange for ratings */
+  font-weight: bold;
+}
+
+/* Hover effect for interaction */
+.movie-card:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+  transform: translateY(-3px); /* Slight lift */
+}
+
+/* Optional: Add orange accent on hover or interaction */
+.movie-card:hover h2,
+.movie-card:hover .rating {
+  color: #f9a825; /* Orange on hover */
+}
+
+/* Responsiveness (adjust as needed) */
+@media (max-width: 768px) {
+  .movie-card {
+    grid-template-columns: auto; /* Switch to single column on small screens */
+  }
+}
